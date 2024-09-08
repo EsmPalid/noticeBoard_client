@@ -1,0 +1,30 @@
+#background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    background-color: rgb(236, 236, 236);
+}
+
+#logInForm {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(212, 214, 220);
+    width: 80%;
+    max-width: 1000px;
+    min-width: 500px;
+    height: 70%;
+    min-height: 500px;
+}
+
+.logInFormDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 30px;
+    background-color: brown;
+}

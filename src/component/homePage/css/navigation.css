@@ -1,0 +1,56 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    font-style: bold;
+    width: 100%;
+    height: 100%;
+    min-height: 70px;
+    background-color: rgb(33, 31, 31);
+}
+
+.buttonDiv {
+    display: flex;
+    width: 20%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.showMenu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    min-height: 100px;
+    background-color: rgb(235, 236, 237);
+    position: sticky;
+}
+
+.downMenu {
+    display: none;
+}
+/*
+@media (max-width: 800px) {
+    .header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        color: rgb(255, 255, 255);
+        font-size: 25px;
+        font-style: bold;
+        padding-left: 100px;
+        padding: 0;
+        max-width: 767px;
+        width: 100%;
+        height: 100%;
+        min-height: 70px;
+        background-color: rgb(178, 37, 37);
+    }
+    .logInButton {
+        display: none;
+    }
+}
+*/
