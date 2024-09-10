@@ -11,9 +11,9 @@ const LogInForm = () => {
         localStorage.getItem("idRemember") ? true : false
     );
 
-    // test
-    // test1234
-    // hello wrold
+    // 나랏말쌈이 듕국에다라
+    // 서로 사맛디 아니할세
+    // 내 이를 어여삐여겨
 
     useEffect(() => {
         if (idRemember) {
