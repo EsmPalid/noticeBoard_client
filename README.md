@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# Client 정보
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### 1. Path에 따른 Page
 
-## Available Scripts
+Path에 따른 Page 전환은 react-router-dom를 통해 구현이 가능하다.
+  >더 자세히는 BrowserRouter , Routes , Route , Navigate 등의 컴포넌트를 사용함
 
-In the project directory, you can run:
+  - path='/' :  Home page
+  - path='/logInPage' : LogIn page
+  - path='/signUpPage' : SignUp page
+  - path='/createArticle' : CreateArticle page
+  - path='/content' : Content page
 
-### `npm start`
+-----
+#### 2. Page별 주요 기능
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  - Home page
+  
+site를 접속할 때 , 가장 처음에 보이게되는 page의 역할을 수행한다.  
+logIn , signUp , createArticle , content 등의 Page로 이동할 수 있는 통로 역할을 함
+Article , Category 등 server state를 받아와서 보여줌 (미완)
+  >해당 Page의 Component는 다른 Page에서 많이 참조하여 재사용한다.  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+  - Login page  
+  
+사용자의 `로그인 기능`을 담당하는 page임
+logInId 기억하기 기능이 존재함
+  >본래는 logInId , password 찾기 기능도 생각했지만... 현실적으로 생각하면 힘들다.  
+  >처음에는 Email(nodemailer 라이브러리)로 해당 기능을 구현하려고 생각했는데 , 지금은 접음
 
-### `npm test`
+  - SignUp page  
+  
+회원가입 기능을 담당하는 page  
+정규표현식(RegExp)을 사용하여 , logInId , password 패턴 확인 후 , 적절한 message 출력  
+logId 및 nickName이 사용가능한지 , server로 요청을 하는 기능
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  - CreateArticle page  
+  
+사용자가 직접 Content를 작성하는 Page(draft.js 라이브러리 사용)
+category 등 server state를 받아옴
+editorState가 변경될 때 마다 , localStorage에 해당 내용 저장
 
-### `npm run build`
+  - Content page  
+  
+article, content 등 server state를 받아옴
+  >댓글 , 좋아요 , 신고 , 작성자 확인 등등의 미구현 기능 많음  
+  >솔직히, 손댈 엄두안남  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+----
+#### 3. Page별 문제점 , 해야할 일 등
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+일단보류
